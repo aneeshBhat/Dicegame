@@ -1,0 +1,43 @@
+<html>
+    <head>
+    
+    </head>  
+    
+    <body>
+        <style>
+
+        </style>
+        <div class="container">
+            <h1>Dice Game</h1>
+
+            <div class="dice">
+                <p>player 1</p>
+                <img src="assets/dice1.png" alt="" id="check1">
+            </div>
+            <div class="dice">
+                <p>player 2</p>
+                <img src="assets/dice6.png" alt="" id="check2">
+            </div>
+            <button onclick="playGame()">Click Me</button>
+        </div>
+
+        <script>
+         playGame = ()=>{
+             var game = Math.floor(Math.random()*6+1);
+             var player1_dice  = `assets/dice${game}.png`;
+             document.getElementById('check1').setAttribute("src",player1_dice);
+ 
+             var game1 = Math.floor(Math.random()*6+1);
+             var player2_dice  = `assets/dice${game1}.png`;
+             document.getElementById('check2').setAttribute("src",player2_dice);
+
+             if(player1_dice > player2_dice){
+                 console.log(player2_diceb )
+                 document.querySelector('h1').innerHTML = "Player 1 wins";
+
+             }
+
+         }
+        </script>
+    </body>
+</html>
